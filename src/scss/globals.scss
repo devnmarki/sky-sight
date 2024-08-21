@@ -1,3 +1,5 @@
+@use "utils/variables" as var;
+
 *,
 *::before,
 *::after {
@@ -5,4 +7,10 @@
     padding: 0;
     box-sizing: border-box;
     font-size: 100%;
+}
+
+body {
+    height: 100vh;
+    background-color: var.$gray;
+    font-family: var.$font;
 }
