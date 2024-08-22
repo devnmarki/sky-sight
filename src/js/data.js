@@ -1,5 +1,6 @@
 import { API_KEY } from "./globals";
 
+// Fetch data of current day weather (current weather data)
 export const getCurrentWeatherData = async (city) => {
 
     try {
