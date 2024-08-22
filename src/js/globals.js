@@ -1,6 +1,8 @@
 export const API_KEY = "942843fc2c829a95df8ea3d0ac14bea0";
 
 export const CURRENT_WEATHER_API_URL = "https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}";
+export const GEOCODING_API_URL = "http://api.openweathermap.org/geo/1.0/direct?q=London&limit=5&appid={API key}";
+export const AIR_POLLUTION_API_URL = "http://api.openweathermap.org/data/2.5/air_pollution/forecast?lat={lat}&lon={lon}&appid={API key}";
 
 // Input location form elements
 export const searchLocationBtn = document.getElementById("search-location-btn");
@@ -18,7 +20,14 @@ export const OVERVIEW_ELEMENTS = {
 
 // Convert comlicated delta time number(unix) to actual hours and minutes(time)
 export const convertUnixToTime = (unixTimestamp, timezoneOffset) => {
-    const date = new Date((unixTimestamp + timezoneOffset / 2) * 1000);
+    // Correctly apply the timezone offset to the Unix timestamp
+    const date = new Date((unixTimestamp + timezoneOffset) * 1000);
+
+    // Check if the date is valid
+    if (isNaN(date.getTime())) {
+        console.error("Invalid date encountered");
+        return "Invalid Date";
+    }
 
     return date.toLocaleTimeString("en-US", {
         hour: '2-digit',
@@ -27,7 +36,7 @@ export const convertUnixToTime = (unixTimestamp, timezoneOffset) => {
     });
 }
 
-// Set source of weather icon to icon from weather data
+// Update source of current weather icon to icon from weather data
 export const setWeatherIcon = (image, data) => {
     image.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png`;
 }

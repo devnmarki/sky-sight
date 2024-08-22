@@ -9,32 +9,73 @@
   <body>
 
 
-    <section class="overview-section">
-      <img src="/images/logo_image.svg" alt="Logo Image" class="overview-section__logo">
-      
-      <div class="overview-section__container">
-        <form class="city-input-form" id="city-input-form">
-          <input type="text" placeholder="Enter Location..." class="input-field" id="location-input-field">
-          <div class="search-btn" id="search-location-btn">
-            <img src="/icons/search_icon.svg" alt="Search Icon">
+    <div class="wrapper">
+
+      <section class="overview-section">
+        <img src="/images/logo_image.svg" alt="Logo Image" class="overview-section__logo">
+        
+        <div class="overview-section__container">
+          <form class="city-input-form" id="city-input-form">
+            <input type="text" placeholder="Enter Location..." class="input-field" id="location-input-field">
+            <div class="search-btn" id="search-location-btn">
+              <img src="/icons/search_icon.svg" alt="Search Icon">
+            </div>
+          </form>
+
+          <div class="city-template">
+            <p id="city-name">Berlin, DE</p>
           </div>
-        </form>
 
-        <div class="city-template">
-          <p id="city-name">Berlin, DE</p>
+          <p class="day-time-text" id="day-time-text"><span class="day-time-text" id="day-text">Moday</span>, <span class="time-text" id="time-text">16:00</span></p>
+        
+          <img src="https://openweathermap.org/img/wn/04d@4x.png" alt="Weather Image" class="weather-image" id="weather-image">
+        
+          <h1 class="temp-text" id="temp-text">12&#176;C</h1>
+
+          <p class="weather-description-text" id="weather-description-text">Mostly Cloudy</p>
         </div>
+      </section>
 
-        <p class="day-time-text" id="day-time-text"><span class="day-time-text" id="day-text">Moday</span>, <span class="time-text" id="time-text">16:00</span></p>
-      
-        <img src="https://openweathermap.org/img/wn/04d@4x.png" alt="Weather Image" class="weather-image" id="weather-image">
-      
-        <h1 class="temp-text" id="temp-text">12&#176;C</h1>
+      <section class="highlights-section">
+        <h1 class="highlights-section__header">Today's Highlights</h1>
+        <div class="highlights-section__dashboard">
+          <div class="panel">
+            <h1>Wind Status</h1>
+            <p id="wind-status">0,36 km/h</p>
+          </div>
 
-        <p class="weather-description-text" id="weather-description-text">Mostly Cloudy</p>
-      </div>
+          <div class="panel">
+            <h1>Humidity</h1>
+            <p id="humidity">64%</p>
+          </div>
 
+          <div class="panel">
+            <h1>Sunrise</h1>
+            <p id="sunrise">17:45</p>
+          </div>
 
-    </section>
+          <div class="panel">
+            <h1>Sunset</h1>
+            <p id="sunset">18:45</p>
+          </div>
+
+          <div class="panel">
+            <h1>Visibility</h1>
+            <p id="visibility">1.0km</p>
+          </div>
+
+          <div class="panel">
+            <h1>Air Quality</h1>
+            <p id="air-quality">Moderate</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="week-section">
+
+      </section>
+
+    </div>
 
 
     <script type="module" src="/src/js/main.js"></script>

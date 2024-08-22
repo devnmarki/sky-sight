@@ -1,7 +1,7 @@
 import { kelvinToCelsius, OVERVIEW_ELEMENTS, setWeatherIcon } from "./globals";
 
 // Set all current weather overview elements
-export const setCurrentWeatherElements = async (data) => {
+export const setCurrentWeatherElements = (data) => {
     updateCityName(data);
     updateCurrentTime(data);
     updateWeatherStats(data);
