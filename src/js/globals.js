@@ -1,8 +1,8 @@
 export const API_KEY = "942843fc2c829a95df8ea3d0ac14bea0";
 
 export const CURRENT_WEATHER_API_URL = "https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}";
-export const GEOCODING_API_URL = "http://api.openweathermap.org/geo/1.0/direct?q=London&limit=5&appid={API key}";
-export const AIR_POLLUTION_API_URL = "http://api.openweathermap.org/data/2.5/air_pollution/forecast?lat={lat}&lon={lon}&appid={API key}";
+export const GEOCODING_API_URL = "https://api.openweathermap.org/geo/1.0/direct?q=London&limit=5&appid={API key}";
+export const AIR_POLLUTION_API_URL = "https://api.openweathermap.org/data/2.5/air_pollution/forecast?lat={lat}&lon={lon}&appid={API key}";
 
 // Input location form elements
 export const searchLocationBtn = document.getElementById("search-location-btn");
