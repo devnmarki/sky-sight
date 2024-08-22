@@ -24,7 +24,7 @@ export const getGeocodingData = async (city) => {
 
     try {
 
-        const response = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${API_KEY}`);
+        const response = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${API_KEY}`);
 
         if (!response.ok) {
             throw new Error("Failed to fetch geocoding data!");
@@ -43,7 +43,7 @@ export const getAirPollutionData = async (lat, lon) => {
 
     try {
 
-        const response = await fetch(`http://api.openweathermap.org/data/2.5/air_pollution/forecast?lat=${lat}&lon=${lon}&appid=${API_KEY}`);
+        const response = await fetch(`https://api.openweathermap.org/data/2.5/air_pollution/forecast?lat=${lat}&lon=${lon}&appid=${API_KEY}`);
 
         if (!response.ok) {
             throw new Error("Failed to fetch air pollution data");
