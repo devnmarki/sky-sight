@@ -153,6 +153,19 @@
             }
 
             .weather-image {
+                width: 210px;
+            }
+        }
+    }
+}
+
+@include mix.breakpoint(xl) {
+    .overview-section {
+
+        &__container {
+            width: 310px;
+
+            .weather-image {
                 width: 310px;
             }
         }
